@@ -19,6 +19,11 @@ app.get('/unzombify', function(req, res) {
 
 });
 
+app.use(function(req, res, next) {
+  res.status(404);
+  res.json({status: 404, message: "route not found"});
+});
+
 var server = app.listen(3000, function() {
   var host = server.address().address;
   var port = server.address().port;
