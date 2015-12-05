@@ -9,7 +9,6 @@ app.get('/', function(req, res) {
   var file = fs.createReadStream('README.md');
     
   file.pipe(markdownTransformer()).pipe(res);
-  //res.send('Hello World!');
 });
 
 app.get('/zombify', function(req, res) {
