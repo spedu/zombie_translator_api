@@ -3,7 +3,14 @@ var fs = require('fs');
 
 var app = express();
 
+var logger = require('./logger');
 var markdownTransformer = require('./markdown_transformer');
+var Translator = require('./translator');
+
+app.use(function(req, res, next) {
+  logger(req, res);
+  next();
+});
 
 app.get('/', function(req, res) {
   var file = fs.createReadStream('README.md');
@@ -11,12 +18,26 @@ app.get('/', function(req, res) {
   file.pipe(markdownTransformer()).pipe(res);
 });
 
-app.get('/zombify', function(req, res) {
+app.get('/zombify', function(req, res, next) {
+  // TODO: check if q param is there
+  var text = req.query.q;
 
+  // TODO: check length
+  
+  var translatedText = Translator.zombify(text);
+
+  res.json({message: translatedText});
 });
 
-app.get('/unzombify', function(req, res) {
+app.get('/unzombify', function(req, res, next) {
+  // TODO: check if q param is there
+  var text = req.query.q;
 
+  // TODO: check length
+  
+  var translatedText = Translator.unzombify(text);
+
+  res.json({message: translatedText});
 });
 
 app.use(function(req, res, next) {
