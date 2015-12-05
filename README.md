@@ -79,5 +79,11 @@ Invalid route
 
 `{ "status": 404, "message": "route not found" }`
 
+---
+
+## How to run locally
+
+`npm start`
+
 
  
