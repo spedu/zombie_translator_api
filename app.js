@@ -36,22 +36,14 @@ router.use(function(req, res, next) {
 });
 
 router.get('/zombify', function(req, res, next) {
-  // TODO: check if q param is there
   var text = req.query.q;
-
-  // TODO: check length
-  
   var translatedText = Translator.zombify(text);
 
   res.json({message: translatedText});
 });
 
 router.get('/unzombify', function(req, res, next) {
-  // TODO: check if q param is there
   var text = req.query.q;
-
-  // TODO: check length
-  
   var translatedText = Translator.unzombify(text);
 
   res.json({message: translatedText});
