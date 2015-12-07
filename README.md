@@ -67,6 +67,12 @@ Result:
 
 ## Errors
 
+### 422 Unprocessible Entity
+
+q parameter is not set
+
+`{ "status": 422, "message": "q parameter undefined" }`
+
 ### 414 Response Status Code
 
 Characters over 1000 characters in length
