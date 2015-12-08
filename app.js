@@ -49,7 +49,7 @@ router.get('/unzombify', function(req, res, next) {
   res.json({message: translatedText});
 });
 
-app.use('/', router);
+app.use('/api', router);
 
 app.use(function(req, res, next) {
   res.status(404);

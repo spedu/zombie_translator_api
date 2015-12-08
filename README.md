@@ -19,11 +19,11 @@ API to translate to and from Zombie to English.
 
 ---
 
-## GET /zombify
+## GET /api/zombify
 
 ### Resource URL
 
-  `http://localhost:3000/zombify`
+  `http://localhost:3000/api/zombify`
 
 ### Parameters
 
@@ -34,7 +34,7 @@ API to translate to and from Zombie to English.
 
 ### Example Request
 
-`http://localhost:3000/zombify?q=test`
+`http://localhost:3000/api/zombify?q=test`
 
 Result:
   
@@ -42,11 +42,11 @@ Result:
 
 ---
 
-## GET /unzombify
+## GET /api/unzombify
 
 ### Resource URL
 
-  `http://localhost:3000/unzombify`
+  `http://localhost:3000/api/unzombify`
 
 ### Parameters
 
@@ -57,7 +57,7 @@ Result:
 
 ### Example Request
 
-`http://localhost:3000/unzombify?q=trrstrrrh`
+`http://localhost:3000/api/unzombify?q=trrstrrrh`
 
 Result:
   
