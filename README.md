@@ -95,8 +95,8 @@ Nodemon
 
 ## How to run locally
 
-`npm install`
-`npm start`
+* `npm install`
+* `npm start`
 
 
  
