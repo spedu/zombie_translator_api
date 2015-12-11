@@ -19,11 +19,11 @@ API to translate to and from Zombie to English.
 
 ---
 
-## GET /api/zombify
+## GET /zombify
 
 ### Resource URL
 
-  `http://localhost:3000/api/zombify`
+  `http://localhost:3000/zombify`
 
 ### Parameters
 
@@ -34,7 +34,7 @@ API to translate to and from Zombie to English.
 
 ### Example Request
 
-`http://localhost:3000/api/zombify?q=test`
+`http://localhost:3000/zombify?q=test`
 
 Result:
   
@@ -42,11 +42,11 @@ Result:
 
 ---
 
-## GET /api/unzombify
+## GET /unzombify
 
 ### Resource URL
 
-  `http://localhost:3000/api/unzombify`
+  `http://localhost:3000/unzombify`
 
 ### Parameters
 
@@ -57,7 +57,7 @@ Result:
 
 ### Example Request
 
-`http://localhost:3000/api/unzombify?q=trrstrrrh`
+`http://localhost:3000/unzombify?q=trrstrrrh`
 
 Result:
   
@@ -87,8 +87,15 @@ Invalid route
 
 ---
 
+## Dependencies
+
+Nodemon
+
+`npm install -g nodemon`
+
 ## How to run locally
 
+`npm install`
 `npm start`
 
 
